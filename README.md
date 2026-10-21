@@ -161,15 +161,11 @@ An intermittent case-020 HTTP 502 was observed in an earlier run. Diagnostics we
 
 Each LLM attempt writes a privacy-minimized JSON line to the Uvicorn console. On a 502, match its `request_id` from the benchmark report to the server log; the record includes attempt outcomes, durations, effective HTTP timeouts, and available response metadata, but omits inquiry text, prompts, document text, provider response bodies, and API keys. `LLM_TIMEOUT_SECONDS` controls the provider request timeout; benchmark `--timeout` only controls how long the benchmark waits for the API.
 
-### Portfolio demo checklist
+### Verified demo paths
 
-- [x] Activate the `grant-inbox-copilot` environment and start Uvicorn with the configured local model; confirm `Application startup complete` and open `/docs`. (Verified in the live demo: `/docs` returned HTTP 200 and the model-backed request succeeded.)
-- [x] Run the no-match API example. Show that it returns `needs_review`, `escalate: true`, `no_knowledge_match`, no citations, and zero LLM attempts. (Verified with `demo-no-match-001`; `/docs` is available for the interactive Swagger demo.)
-- [x] Run the evidence-matching example with a synthetic inquiry. Point out the extracted facts, policy citations, deterministic eligibility result, and escalation flag; do not present it as a funding decision. (Verified with `demo-evidence-001`; it returned `eligible`, cited five policy documents, and did not escalate.)
-- [x] If asked about quality, show the 50-case report `outputs/evaluation-ollama-policy-citation-fix-recheck-full.json` and the passing full local test suite (98 passed on 2026-10-21). Explain that the historical citation differences have targeted code fixes and that the intermittent case-020 502 was not reproduced after diagnostics were added. Cost is unknown for the local Ollama run. A concise talk track is in [DEMO_SCRIPT.md](DEMO_SCRIPT.md).
-- [x] If demonstrating n8n, use its Test URL while the API is running and the workflow is listening. Confirm the response returns the escalation outcome; this sample flow does not create a ticket or send email. (Verified live with `demo-n8n-no-match-001`; the one-shot test listener returned the expected `needs_review` response, `no_knowledge_match`, and `escalate: true`.)
-- [x] Optional Streamlit UI: confirm synthetic input, run both examples, confirm escalated cases appear in the local queue, and mark one reviewed. (Verified with Streamlit AppTest against the live API: the review item moved from pending to reviewed, and the eligible example did not enter the queue.)
-- [ ] Stop Uvicorn with `Ctrl+C` after the demo. Keep real applicant data and API keys out of prompts, screenshots, and committed files.
+On the local setup, `/docs` and both synthetic API examples were verified. The no-match example escalates without calling the model; the evidence-matching example returns policy citations and a deterministic result. The n8n test webhook and the Streamlit review queue were also exercised with synthetic data. The demo does not create tickets or send email.
+
+The full local suite passed with 98 tests on 2026-10-21. GitHub Actions checks Python 3.11 and 3.12. A 50-case local Ollama benchmark is summarized above; its cost is unknown. See [DEMO_SCRIPT.md](DEMO_SCRIPT.md) for the walkthrough and interview notes.
 
 ## n8n and Power Automate
 
