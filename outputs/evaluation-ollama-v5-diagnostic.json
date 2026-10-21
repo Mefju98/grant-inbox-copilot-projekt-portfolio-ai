@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-20T07:54:53.657877+00:00",
+  "api_url": "http://127.0.0.1:8000/triage",
+  "case_count": 1,
+  "failure_count": 0,
+  "metrics": {
+    "case_count": 1,
+    "accuracy": 0.0,
+    "per_class": {
+      "eligible": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "ineligible": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 0
+      },
+      "needs_review": {
+        "precision": 0.0,
+        "recall": 1.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "eligible": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 1
+      },
+      "ineligible": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      },
+      "needs_review": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      }
+    },
+    "macro_f1": 0.3333,
+    "schema_valid_rate": 1.0,
+    "citation_precision": 0.8333,
+    "citation_recall": 1.0,
+    "citation_f1": 0.9091,
+    "escalation_precision": 0.0,
+    "escalation_recall": 1.0,
+    "escalation_f1": 0.0,
+    "total_cost_usd": null,
+    "average_cost_usd": null,
+    "cost_observation_count": 0,
+    "average_latency_ms": 4402.0,
+    "p95_latency_ms": 4402,
+    "latency_observation_count": 1
+  },
+  "cases": [
+    {
+      "case_id": "case-001",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "funding-range-v1",
+        "required-information-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4402,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "conflicting_evidence"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    }
+  ]
+}

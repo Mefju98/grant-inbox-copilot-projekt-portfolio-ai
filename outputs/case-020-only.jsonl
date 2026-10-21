@@ -1,0 +1,1 @@
+{"case_id":"case-020","message":"A micro company in North requests 9000 PLN for a sensor prototype.","expected_eligibility":"ineligible","expected_escalation":false,"expected_citation_ids":["funding-range-v1"]}

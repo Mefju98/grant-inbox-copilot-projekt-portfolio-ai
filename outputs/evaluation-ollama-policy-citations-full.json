@@ -1,0 +1,1671 @@
+{
+  "created_at": "2026-10-20T09:27:11.963052+00:00",
+  "api_url": "http://127.0.0.1:8000/triage",
+  "case_count": 50,
+  "failure_count": 0,
+  "metrics": {
+    "case_count": 50,
+    "accuracy": 0.72,
+    "per_class": {
+      "eligible": {
+        "precision": 1.0,
+        "recall": 0.7647,
+        "f1": 0.8667,
+        "support": 17
+      },
+      "ineligible": {
+        "precision": 0.875,
+        "recall": 0.4118,
+        "f1": 0.56,
+        "support": 17
+      },
+      "needs_review": {
+        "precision": 0.5517,
+        "recall": 1.0,
+        "f1": 0.7111,
+        "support": 16
+      }
+    },
+    "confusion_matrix": {
+      "eligible": {
+        "eligible": 13,
+        "ineligible": 1,
+        "needs_review": 3
+      },
+      "ineligible": {
+        "eligible": 0,
+        "ineligible": 7,
+        "needs_review": 10
+      },
+      "needs_review": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 16
+      }
+    },
+    "macro_f1": 0.7126,
+    "schema_valid_rate": 1.0,
+    "citation_precision": 0.8148,
+    "citation_recall": 0.8029,
+    "citation_f1": 0.8088,
+    "escalation_precision": 0.5517,
+    "escalation_recall": 1.0,
+    "escalation_f1": 0.7111,
+    "total_cost_usd": null,
+    "average_cost_usd": null,
+    "cost_observation_count": 0,
+    "average_latency_ms": 7016.2,
+    "p95_latency_ms": 5188,
+    "latency_observation_count": 50
+  },
+  "successful_response_count": 50,
+  "successful_response_metrics": {
+    "case_count": 50,
+    "accuracy": 0.72,
+    "per_class": {
+      "eligible": {
+        "precision": 1.0,
+        "recall": 0.7647,
+        "f1": 0.8667,
+        "support": 17
+      },
+      "ineligible": {
+        "precision": 0.875,
+        "recall": 0.4118,
+        "f1": 0.56,
+        "support": 17
+      },
+      "needs_review": {
+        "precision": 0.5517,
+        "recall": 1.0,
+        "f1": 0.7111,
+        "support": 16
+      }
+    },
+    "confusion_matrix": {
+      "eligible": {
+        "eligible": 13,
+        "ineligible": 1,
+        "needs_review": 3
+      },
+      "ineligible": {
+        "eligible": 0,
+        "ineligible": 7,
+        "needs_review": 10
+      },
+      "needs_review": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 16
+      }
+    },
+    "macro_f1": 0.7126,
+    "schema_valid_rate": 1.0,
+    "citation_precision": 0.8148,
+    "citation_recall": 0.8029,
+    "citation_f1": 0.8088,
+    "escalation_precision": 0.5517,
+    "escalation_recall": 1.0,
+    "escalation_f1": 0.7111,
+    "total_cost_usd": null,
+    "average_cost_usd": null,
+    "cost_observation_count": 0,
+    "average_latency_ms": 7016.2,
+    "p95_latency_ms": 5188,
+    "latency_observation_count": 50
+  },
+  "cases": [
+    {
+      "case_id": "case-001",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4923,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-002",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4668,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-003",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4657,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "unsupported_model_claim"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-004",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4779,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-005",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4582,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-006",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4666,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-007",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4271,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-008",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4454,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-009",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4528,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-010",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4272,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-011",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4536,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-012",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 5665,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-013",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 5045,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-014",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "eligible",
+      "escalate": false,
+      "citation_ids": [
+        "fictional-program-overview-v1",
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "funding-range-v1",
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 5001,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-015",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4412,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-016",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4511,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-017",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "eligible-company-sizes-v1"
+      ],
+      "latency_ms": 4570,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-018",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4539,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-019",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "eligible-company-sizes-v1"
+      ],
+      "latency_ms": 4435,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-020",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 127033,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 2,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-021",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "funding-range-v1"
+      ],
+      "latency_ms": 4735,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-022",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "eligible-company-sizes-v1"
+      ],
+      "latency_ms": 4309,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-023",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "eligible-regions-v1"
+      ],
+      "latency_ms": 4255,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-024",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "funding-range-v1"
+      ],
+      "latency_ms": 4825,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-025",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "funding-range-v1"
+      ],
+      "latency_ms": 4658,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-026",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4200,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "ineligible",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-027",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4142,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "ineligible",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-028",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 3985,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "ineligible",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-029",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4588,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-030",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-company-sizes-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4276,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [
+        "company_size"
+      ],
+      "model_reported_facts_missing": [
+        "company_size"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-031",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4874,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-032",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4461,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-033",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "eligible-company-sizes-v1"
+      ],
+      "latency_ms": 4452,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-034",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4529,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-035",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-regions-v1",
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4543,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "region",
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "region",
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-036",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-company-sizes-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4134,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [
+        "company_size"
+      ],
+      "model_reported_facts_missing": [
+        "company_size"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-037",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "funding-range-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4450,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "project_summary"
+      ],
+      "required_facts_missing": [
+        "requested_amount_pln"
+      ],
+      "model_reported_facts_missing": [
+        "requested_amount_pln"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-038",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4002,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-039",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1"
+      ],
+      "latency_ms": 4515,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-040",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4449,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-041",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 5107,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-042",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4396,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-043",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-regions-v1",
+        "eligible-company-sizes-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4692,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [
+        "region",
+        "company_size"
+      ],
+      "model_reported_facts_missing": [
+        "region",
+        "company_size"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-044",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4212,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-045",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-regions-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4216,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [
+        "region"
+      ],
+      "model_reported_facts_missing": [
+        "region"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-046",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4755,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-047",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4847,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "needs_review",
+      "attempts": 1,
+      "escalation_reasons": [
+        "missing_information"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln"
+      ],
+      "required_facts_missing": [
+        "project_summary"
+      ],
+      "model_reported_facts_missing": [
+        "project_summary"
+      ],
+      "error_code": null
+    },
+    {
+      "case_id": "case-048",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 4322,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-049",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 5188,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    },
+    {
+      "case_id": "case-050",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "needs_review",
+      "escalate": true,
+      "citation_ids": [
+        "eligible-project-types-v1",
+        "required-information-v1"
+      ],
+      "latency_ms": 5146,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "eligible",
+      "attempts": 1,
+      "escalation_reasons": [
+        "ambiguous_input"
+      ],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    }
+  ]
+}

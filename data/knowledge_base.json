@@ -1,0 +1,38 @@
+[
+  {
+    "document_id": "fictional-program-overview-v1",
+    "title": "Fictional North Innovation Fund — Program Overview",
+    "source_version": "1.0",
+    "content": "The Fictional North Innovation Fund supports synthetic micro and small enterprises carrying out eligible research, experimental development, or prototype work in the North region. This fictional program is portfolio-demo data only and has no real funding authority."
+  },
+  {
+    "document_id": "eligible-regions-v1",
+    "title": "Fictional North Innovation Fund — Eligible Region",
+    "source_version": "1.0",
+    "content": "Applicants must operate in the North region. Businesses based in South, East, West, or another region do not satisfy this fictional program's regional criterion. If the operating region is missing, uncertain, or contradictory, request clarification and escalate."
+  },
+  {
+    "document_id": "eligible-company-sizes-v1",
+    "title": "Fictional North Innovation Fund — Company Size",
+    "source_version": "1.0",
+    "content": "Only micro and small enterprises meet the company-size criterion in this fictional program. Medium and large enterprises do not meet it. If company size is missing or conflicting, request clarification and escalate."
+  },
+  {
+    "document_id": "funding-range-v1",
+    "title": "Fictional North Innovation Fund — Request Range",
+    "source_version": "1.0",
+    "content": "The requested grant amount must be at least 10,000 PLN and no more than 200,000 PLN, inclusive. The requested grant amount must be distinguishable from total project cost. Missing, uncertain, or contradictory amounts require clarification and escalation."
+  },
+  {
+    "document_id": "eligible-project-types-v1",
+    "title": "Fictional North Innovation Fund — Eligible Project Types",
+    "source_version": "1.0",
+    "content": "Eligible activity includes applied research, experimental development, and building or validating an innovation prototype. Routine office renovation, standard furniture purchases, routine configuration, and ordinary product adaptation alone are not eligible research or development activity. If project scope is unclear or conflicting, request clarification and escalate."
+  },
+  {
+    "document_id": "required-information-v1",
+    "title": "Fictional North Innovation Fund — Information Checklist",
+    "source_version": "1.0",
+    "content": "A preliminary triage needs the operating region, company size, requested grant amount, and a description of the project's research, experimental development, or prototype activity. Missing required information must not be inferred; request it from the applicant and escalate."
+  }
+]

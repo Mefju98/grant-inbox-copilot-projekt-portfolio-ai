@@ -1,0 +1,114 @@
+{
+  "name": "Grant Inbox Copilot - synthetic inquiry",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "grant-inbox-copilot",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a1a34a42-6caf-4f9e-a2c6-33a8b3d2aa01",
+      "name": "Receive synthetic inquiry",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "7a71aacc-a6ac-4792-a547-9ea16dcd18a5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/triage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.body }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "8f5759c8-d7cc-43e9-aa6a-d1cc67232b79",
+      "name": "Call Grant Inbox API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0cc6d6da-54b6-4ef4-b0f1-f0a6bf05da3f",
+              "leftValue": "={{ $json.result.escalate }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a68620cf-9145-4aa5-bd29-942ea521feaa",
+      "name": "Needs human review?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [740, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "449207d1-50ed-490f-b0cf-8121f84060a4",
+      "name": "Return review-required result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "76b9fed7-dc6b-41db-838f-d911a65b2be9",
+      "name": "Return triage result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 400]
+    }
+  ],
+  "connections": {
+    "Receive synthetic inquiry": {
+      "main": [[{"node": "Call Grant Inbox API", "type": "main", "index": 0}]]
+    },
+    "Call Grant Inbox API": {
+      "main": [[{"node": "Needs human review?", "type": "main", "index": 0}]]
+    },
+    "Needs human review?": {
+      "main": [
+        [{"node": "Return review-required result", "type": "main", "index": 0}],
+        [{"node": "Return triage result", "type": "main", "index": 0}]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6b053563-5889-4e58-9203-82880607a65c",
+  "tags": []
+}

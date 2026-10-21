@@ -1,0 +1,149 @@
+{
+  "created_at": "2026-10-20T21:18:56.891728+00:00",
+  "api_url": "http://127.0.0.1:8000/triage",
+  "case_count": 1,
+  "failure_count": 0,
+  "metrics": {
+    "case_count": 1,
+    "accuracy": 1.0,
+    "per_class": {
+      "eligible": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 0
+      },
+      "ineligible": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "needs_review": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "eligible": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      },
+      "ineligible": {
+        "eligible": 0,
+        "ineligible": 1,
+        "needs_review": 0
+      },
+      "needs_review": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      }
+    },
+    "macro_f1": 1.0,
+    "schema_valid_rate": 1.0,
+    "citation_precision": 1.0,
+    "citation_recall": 1.0,
+    "citation_f1": 1.0,
+    "escalation_precision": 1.0,
+    "escalation_recall": 1.0,
+    "escalation_f1": 1.0,
+    "total_cost_usd": null,
+    "average_cost_usd": null,
+    "cost_observation_count": 0,
+    "average_latency_ms": 10454.0,
+    "p95_latency_ms": 10454,
+    "latency_observation_count": 1
+  },
+  "successful_response_count": 1,
+  "successful_response_metrics": {
+    "case_count": 1,
+    "accuracy": 1.0,
+    "per_class": {
+      "eligible": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 0
+      },
+      "ineligible": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "needs_review": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "eligible": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      },
+      "ineligible": {
+        "eligible": 0,
+        "ineligible": 1,
+        "needs_review": 0
+      },
+      "needs_review": {
+        "eligible": 0,
+        "ineligible": 0,
+        "needs_review": 0
+      }
+    },
+    "macro_f1": 1.0,
+    "schema_valid_rate": 1.0,
+    "citation_precision": 1.0,
+    "citation_recall": 1.0,
+    "citation_f1": 1.0,
+    "escalation_precision": 1.0,
+    "escalation_recall": 1.0,
+    "escalation_f1": 1.0,
+    "total_cost_usd": null,
+    "average_cost_usd": null,
+    "cost_observation_count": 0,
+    "average_latency_ms": 10454.0,
+    "p95_latency_ms": 10454,
+    "latency_observation_count": 1
+  },
+  "cases": [
+    {
+      "case_id": "case-020",
+      "http_status": 200,
+      "schema_valid": true,
+      "eligibility": "ineligible",
+      "escalate": false,
+      "citation_ids": [
+        "funding-range-v1"
+      ],
+      "latency_ms": 10454,
+      "cost_usd": null,
+      "model": "qwen2.5:3b",
+      "prompt_version": "triage-v5",
+      "model_proposal_eligibility": "needs_review",
+      "policy_eligibility": "ineligible",
+      "attempts": 1,
+      "request_id": null,
+      "failure_kind": null,
+      "attempt_summaries": [],
+      "escalation_reasons": [],
+      "extracted_policy_fields": [
+        "region",
+        "company_size",
+        "requested_amount_pln",
+        "project_summary"
+      ],
+      "required_facts_missing": [],
+      "model_reported_facts_missing": [],
+      "error_code": null
+    }
+  ]
+}
