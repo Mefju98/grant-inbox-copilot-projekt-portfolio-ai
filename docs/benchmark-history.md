@@ -21,3 +21,9 @@ The intermittent `case-020` failure was not reproduced, so its root cause remain
 ## 2026-10-21: automated tests
 
 The full local test suite passed with 98 tests. GitHub Actions now runs the same suite on Python 3.11 and 3.12. Automated tests use mocked model calls; they do not repeat the live Ollama benchmark.
+
+## 2026-10-21: isolated `case-020` follow-up
+
+After the full recheck, `case-020` was run by itself six more times against the local API and Ollama. All six returned HTTP 200 in one attempt. Latencies ranged from 4.57 to 9.59 seconds. The reports are [`evaluation-case-020-followup.json`](../outputs/evaluation-case-020-followup.json) and [`evaluation-case-020-repeat-1.json`](../outputs/evaluation-case-020-repeat-1.json) through [`evaluation-case-020-repeat-5.json`](../outputs/evaluation-case-020-repeat-5.json).
+
+These isolated successes confirm that the current path is healthy, but they do not reproduce or explain the earlier 502 seen during a full benchmark. The root cause remains unconfirmed; the per-attempt diagnostics are still needed if the intermittent failure returns.
