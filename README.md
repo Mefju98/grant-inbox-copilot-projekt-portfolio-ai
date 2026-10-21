@@ -44,7 +44,7 @@ Open **Anaconda Prompt**, then run these commands one at a time:
 
 ```bat
 conda activate grant-inbox-copilot
-cd /d C:\Users\mateu\Documents\Codex\2026-10-19\grant-inbox-copilot-projekt-portfolio-ai
+cd /d C:\path\to\grant-inbox-copilot-projekt-portfolio-ai
 python -m pip install -e ".[dev]"
 ```
 
@@ -129,7 +129,7 @@ In a second Anaconda Prompt (or after stopping the API), activate the same envir
 
 ```bat
 conda activate grant-inbox-copilot
-cd /d C:\Users\mateu\Documents\Codex\2026-10-19\grant-inbox-copilot-projekt-portfolio-ai
+cd /d C:\path\to\grant-inbox-copilot-projekt-portfolio-ai
 python -m pytest -v
 ```
 
@@ -143,7 +143,7 @@ To run all 50 cases against the configured live API, keep Uvicorn running and us
 
 ```bat
 conda activate grant-inbox-copilot
-cd /d C:\Users\mateu\Documents\Codex\2026-10-19\grant-inbox-copilot-projekt-portfolio-ai
+cd /d C:\path\to\grant-inbox-copilot-projekt-portfolio-ai
 python -m app.benchmark --output outputs\evaluation-openai-compatible.json
 ```
 
