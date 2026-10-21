@@ -155,7 +155,7 @@ This sends one request per case; model-backed cases can incur provider charges a
 
 The latest full local run evaluated 50 synthetic cases with Ollama `qwen2.5:3b` and prompt `triage-v5`. It completed with zero API failures, 100% classification accuracy, 100% schema validity, citation F1 1.000, and escalation F1 1.000. Mean latency was 5.56 seconds; cost is unknown (`null`). The report is `outputs/evaluation-ollama-policy-citation-fix-recheck-full.json`. The full local suite passed with 98 tests on 2026-10-21; GitHub Actions now checks Python 3.11 and 3.12. These results are limited to a small synthetic set and do not establish real-world decision performance.
 
-An intermittent case-020 HTTP 502 was observed in an earlier run. Diagnostics were added, but the error was not reproduced in the latest full run, so its root cause remains unconfirmed. See [benchmark history](docs/benchmark-history.md) for prior runs and targeted rechecks.
+An intermittent case-020 HTTP 502 was observed in an earlier run. Diagnostics were added, but the error was not reproduced in the latest full run or in six subsequent isolated requests (all HTTP 200, one attempt each), so its root cause remains unconfirmed. See [benchmark history](docs/benchmark-history.md) for prior runs and targeted rechecks.
 
 ### Diagnosing provider failures
 

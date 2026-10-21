@@ -39,7 +39,7 @@ Say: “The response includes the extracted eligibility facts and the policy sni
 
 The latest recorded full local run is `outputs/evaluation-ollama-policy-citation-fix-recheck-full.json`: 50 frozen synthetic cases, zero API failures, 100% accuracy, schema validity, citation F1, and escalation F1. It used local Ollama model `qwen2.5:3b` with prompt `triage-v5`; mean latency was about 5.56 seconds and cost was unknown (`null`). The full local test suite passed with 98 tests on 2026-10-21. Pytest reported one Starlette deprecation warning about the legacy `httpx` test client integration.
 
-Say: “These are results on a small synthetic set for this specific local model and prompt. They do not establish real-world performance. The intermittent case-020 502 seen in an earlier run was not reproduced in the later 50-case run, so its original cause remains unconfirmed.”
+Say: “These are results on a small synthetic set for this specific local model and prompt. They do not establish real-world performance. The intermittent case-020 502 seen in an earlier run was not reproduced in the later 50-case run or six isolated requests, so its original cause remains unconfirmed.”
 
 ### 5. Close with limitations (about 45 seconds)
 
