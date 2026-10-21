@@ -1,5 +1,7 @@
 # Grant Inbox Copilot
 
+[![Tests](https://github.com/Mefju98/grant-inbox-copilot-projekt-portfolio-ai/actions/workflows/tests.yml/badge.svg)](https://github.com/Mefju98/grant-inbox-copilot-projekt-portfolio-ai/actions/workflows/tests.yml)
+
 A small portfolio project for safe, human-supervised triage of **synthetic inquiries** about a fictional grant program. It extracts facts, retrieves supporting policy snippets, validates a structured LLM draft, and escalates uncertain cases. It is not a real grant service and must not be used to make funding decisions.
 
 ## What it demonstrates
